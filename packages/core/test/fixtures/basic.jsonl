@@ -1,0 +1,21 @@
+{"type": "permission-mode", "permissionMode": "default", "sessionId": "S"}
+{"type": "user", "isMeta": true, "cwd": "/Users/test", "timestamp": "2026-01-01T10:00:00.000Z", "entrypoint": "cli", "version": "2.1.300", "gitBranch": "HEAD", "message": {"role": "user", "content": "<local-command-caveat>x</local-command-caveat>"}}
+{"type": "user", "cwd": "/Users/test", "timestamp": "2026-01-01T10:00:01.000Z", "entrypoint": "cli", "version": "2.1.300", "gitBranch": "HEAD", "message": {"role": "user", "content": "<pasted_content id=\"ab12\">\n# Plan del proyecto\nhaz cosas\n</pasted_content id=\"ab12\">"}}
+{"type": "assistant", "cwd": "/Users/test", "timestamp": "2026-01-01T10:00:05.000Z", "message": {"role": "assistant", "content": [{"type": "thinking", "thinking": "..."}, {"type": "tool_use", "id": "t1", "name": "Bash", "input": {"command": "cd ~/app"}}]}}
+{"type": "user", "cwd": "/Users/test/app", "timestamp": "2026-01-01T10:00:06.000Z", "message": {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "t1", "content": "ok"}]}}
+{"type": "assistant", "cwd": "/Users/test/app", "timestamp": "2026-01-01T10:00:09.000Z", "message": {"role": "assistant", "content": [{"type": "text", "text": "Hecho."}]}}
+{"type": "ai-title", "aiTitle": "Título IA", "sessionId": "S"}
+{"type": "last-prompt", "sessionId": "S"}
+{"type": "api-request-blob", "hash": "x", "message": {"content": [{"type": "text", "text": "ruido"}]}, "sessionId": "S"}
+{"type": "user", "cwd": "/Users/test/app/src", "timestamp": "2026-01-01T10:01:00.000Z", "message": {"role": "user", "content": "<bash-input>git status</bash-input>"}}
+{"type": "user", "cwd": "/Users/test/app/src", "timestamp": "2026-01-01T10:01:01.000Z", "message": {"role": "user", "content": "<bash-stdout>clean</bash-stdout><bash-stderr></bash-stderr>"}}
+{"type": "user", "isSidechain": true, "cwd": "/Users/test/otro", "timestamp": "2026-01-01T12:00:00.000Z", "message": {"role": "user", "content": "prompt de subagente"}}
+{"type": "user", "cwd": "/Users/test/app", "timestamp": "2026-01-01T10:02:00.000Z", "message": {"role": "user", "content": "<task-notification>agente terminó</task-notification>"}}
+{"type": "user", "cwd": "/Users/test/app", "timestamp": "2026-01-01T10:03:00.000Z", "message": {"role": "user", "content": [{"type": "text", "text": "<system-reminder>ctx</system-reminder>arregla el test"}, {"type": "image", "source": {}}]}}
+{"type": "assistant", "cwd": "/Users/test/app", "timestamp": "2026-01-01T10:04:00.000Z", "message": {"role": "assistant", "content": [{"type": "text", "text": "Arreglado."}]}}
+{"type": "pr-link", "prNumber": 7, "prUrl": "https://github.com/o/app/pull/7", "sessionId": "S", "timestamp": "2026-01-01T10:04:01.000Z"}
+{"type": "pr-link", "prNumber": 7, "prUrl": "https://github.com/o/app/pull/7", "sessionId": "S", "timestamp": "2026-01-01T10:04:02.000Z"}
+{"type": "system", "subtype": "away_summary", "content": "Arreglamos el test. Siguiente: publicar. (disable recaps in /config)", "cwd": "/Users/test/app", "timestamp": "2026-01-01T10:10:00.000Z"}
+{"type": "futuro-tipo-desconocido", "loQueSea": {"a": 1}, "timestamp": "2026-01-01T10:11:00.000Z"}
+{"type": "system", "subtype": "informational", "content": "aviso", "timestamp": "2026-01-09T00:00:00.000Z"}
+{esto no es json

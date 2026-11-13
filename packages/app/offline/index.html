@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>ClaudePanel</title>
+    <link rel="stylesheet" href="offline.css" />
+  </head>
+  <body>
+    <main>
+      <p class="state"><span class="dot" aria-hidden="true"></span>Daemon apagado</p>
+      <h1>No hay conexión con el índice de sesiones</h1>
+      <p class="muted">El panel lee las sesiones del daemon local en 127.0.0.1:7437 y ahora no responde.</p>
+      <button id="start" type="button">Iniciar daemon</button>
+      <p id="msg" class="muted" role="status"></p>
+      <p class="hint">Si no arranca, en una terminal: <code>cpanel doctor</code></p>
+    </main>
+    <script src="offline.js"></script>
+  </body>
+</html>

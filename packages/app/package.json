@@ -1,0 +1,14 @@
+{
+  "name": "@cpanel/app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "icons": "node scripts/make-icons.mjs && tauri icon src-tauri/icons/app-1024.png -o src-tauri/icons",
+    "build": "tauri build --bundles app",
+    "install-app": "node scripts/install-app.mjs"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4"
+  }
+}

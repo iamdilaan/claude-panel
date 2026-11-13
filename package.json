@@ -1,0 +1,27 @@
+{
+  "name": "claude-panel",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=26 <27"
+  },
+  "scripts": {
+    "cpanel": "node packages/cli/src/cpanel.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p packages/ui/tsconfig.json --noEmit",
+    "build:ui": "npm run build -w @cpanel/ui",
+    "dev:ui": "npm run dev -w @cpanel/ui",
+    "app:build": "npm run build:ui && npm run build -w @cpanel/app",
+    "app:install": "npm run install-app -w @cpanel/app",
+    "lint:app": "cd packages/app/src-tauri && cargo clippy --release -- -D warnings"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

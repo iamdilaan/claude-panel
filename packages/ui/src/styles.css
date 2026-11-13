@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+/*
+ * ClaudePanel vive en la barra de menú de macOS: hereda la piel del sistema
+ * (fuente SF, color de acento elegido por la persona, claro/oscuro) en vez de
+ * traer una marca propia. Mono solo para lo que es código: ramas y rutas.
+ */
+:root {
+  --bg: #ececec;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --ink: #1d1d1f;
+  --ink-2: #5e5e63;
+  --ink-3: #8a8a8e;
+  --line: rgb(0 0 0 / 0.09);
+  --line-strong: rgb(0 0 0 / 0.16);
+  --accent: #0a64d8;
+  --accent-ink: #ffffff;
+  --accent-soft: rgb(10 100 216 / 0.09);
+  --live: #1f8f3a;
+  --pause: #b86a00;
+  --warn: #a15c00;
+  --warn-soft: rgb(184 106 0 / 0.12);
+  --danger: #c4231b;
+}
+@supports (color: AccentColor) {
+  :root {
+    --accent: AccentColor;
+    --accent-ink: AccentColorText;
+    --accent-soft: color-mix(in srgb, AccentColor 10%, transparent);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --surface: #2a2a2c;
+    --surface-2: #323234;
+    --ink: #f2f2f4;
+    --ink-2: #a8a8ad;
+    --ink-3: #7c7c81;
+    --line: rgb(255 255 255 / 0.08);
+    --line-strong: rgb(255 255 255 / 0.16);
+    --live: #3fc35f;
+    --pause: #f0a33a;
+    --warn: #f0a33a;
+    --warn-soft: rgb(240 163 58 / 0.14);
+    --danger: #ff6159;
+  }
+  @supports not (color: AccentColor) {
+    :root {
+      --accent: #3b8cff;
+      --accent-soft: rgb(59 140 255 / 0.14);
+    }
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-live: var(--live);
+  --color-pause: var(--pause);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-danger: var(--danger);
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

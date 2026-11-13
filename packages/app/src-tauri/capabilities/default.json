@@ -1,0 +1,8 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Solo la página local «daemon apagado» puede llamar a la app. La página del daemon (http://127.0.0.1) no tiene acceso a IPC.",
+  "windows": ["popover"],
+  "local": true,
+  "permissions": ["core:default"]
+}
